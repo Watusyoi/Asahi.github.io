@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" itemscope="https://schema.org/WebPage">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <i== ページのタイトル -->
+        <title>
+            Hello HTML!
+        </title>
+        <i= レスポンシブに対応させるもの -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <i= 基本この中にcssでデザインレイアウトを書いていく! -->
+        <style>
+         body{
+            color: rgb(255, 255, 255);
+            margin: 0;
+            background-color: rgb(0, 0, 0);
+            padding-top: 10rem;
+         }
+          .box2{
+            background-color: rgb(0, 0, 0);
+            border: 1px solid #aaaaaa;
+         }
+         .boxA{
+            background-color: rgb(0, 0, 0);
+            border: 1px solid #aaaaaa;
+            text-align: center;
+         }
+         .boxB{
+            background-color: rgb(0, 0, 0);
+            border: 1px solid #aaaaaa;
+         }
+         .main1{
+            text-align: center;
+         }
+
+        </style>
+    </head>
+
+    <body>
+        <i= ナビゲーションバー作成　枠組み --></i>
+            <nav class="navbar navbar-expand-lg navbar-dark mt-3 mb-3 fixed-top" style="background-color:  rgb(47, 55, 62)">
+
+                <i= ナビゲーションバー作成　中身 --></i>
+                <a class="navbar-brand" href="intro.html"> 
+                    <i class="bi bi-house-fill">Hello HTML!</i>
+                </a>
+
+                <ul class="navbar-nav"> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="IntroP.html">INTRO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="StoryP.html">STORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="time.html">TIME</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="PageP.html">PAGE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="intro.html">HOME</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="container">
+                <div class="row">
+                    <div class="box2 col-sm-12">
+                        <h2><font face="Courier New" size="10">Favorite Page</font></h2>
+                    </div>
+                    <div class="row">
+                        <div class="boxA col-sm-8">
+                            <main>
+                            <img src="steam1.png" width="500" alt="Game">
+                            </main>
+                        </div>
+                        <div class="boxB col-sm-4">
+                            <main1>
+                            <font size="5">게임을 좋아하기 때문에
+                             이번에는 이 스팀이라는 게임의 쇼핑 사이트를 추천에 올리고 싶습니다</font>
+                            <p><font size="6"><a href="https://store.steampowered.com/?l=japanese">>>Steam</a></font></p>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <footer style="text-align:center;">
+            <font size="1">
+                ◎ウェブプログラミング株式会社
+            </font>
+        </footer>
+
+    </body>
+</html>
