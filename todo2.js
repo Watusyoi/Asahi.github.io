@@ -1,42 +1,39 @@
-const todoListElem = $("#todo-container");
+const textInput = document.getElementById('text-input');
+const todoList = document.getElementById('todo-list');
+const btn = document.getElementById("btn");
 
-let todos = [{ content: "中間プロジェクト"}];
 
-const painTodo =(_,todo) => {
-    const todoItemElem = $("<div>").addClass("todo-item col col-12 p-2 input-group");
-    const todoElem = $("<input>").attr("type", "text").atter("disabled", true).
-    addClass("todo form-control").val(todo.content);
-    todoItemElem.append(todoElem);
-    todoListElem.append(todoItemElem);
-}
+textInput.addEventListener('keydown', e => {
+    const text = textInput.value.trim();
 
-const paintTodos = () => {
-    todoListElem.empty();
-    $.each(todos, painTodo);
-}
+    //もし何も入力がないとき
+    if (text === '' || e.key !== 'Enter') {
+        return;
+    }
+    //定義 リスト追加
+    const li = document.createElement('li');
+    const span = document.createElement('span');
+    const button = document.createElement('button');
 
-const todoInputElem = $("#todo-input");
-const todoAddBtnElem = $("#todo-btn-add");
 
-const appendTodos = (text) => {
-    const newTodos = todos.concat({ content: text });
-    todos = newTodos;
-    paintTodos();
-}
-
-const init = () => {
-    todoAddBtnElem.on("click", () => {
-        appendTodos(todoInputElem.val()); todoInputElem.val("");
+    li.classList.add('list-item');
+    span.textContent = text;
+    span.classList.add('todo-text');
+    
+    button.textContent = '削除';
+    button.type = 'button';
+    button.classList.add('delete-button');
+    button.addEventListener('click', e => {
+        todoList.removeChild(e.target.closest('li'));
     });
 
-    todoInputElem.on("keypress", (e) => {
-        if (e.key === "Enter"){
-            appendTodos(e.target.val()); $(e.target).val("");
-        }
-    });
-    paintTodos();
-}
+    li.appendChild(span);
+    li.appendChild(button);
+    todoList.appendChild(li);
+    textInput.value = '';
+    saveData();
+});
 
-$(function() {
-    init();
+btn.addEventListener('click', e => {
+
 });
